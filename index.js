@@ -1,16 +1,18 @@
 const express = require("express");
 const connectDB = require("./config/database");
-const router = require("./routes/routes");
+const userRouter = require("./routes/userRoutes");
+const productRouter = require("./routes/productRoutes");
 
 require("dotenv").config();
 const PORT = process.env.PORT || 5000;
 const app = express();
 
 app.use(express.json());
-app.use("/api/auth", router);
+app.use("/api/auth", userRouter);
+app.use("/api/products", productRouter);
 
 app.get("/", (req, res) => {
-  res.send("<h1>Hello this is the initial page!</h1>");
+  res.status(200).send("<h1>Hello this is the initial page!</h1>");
 });
 
 const start = async () => {

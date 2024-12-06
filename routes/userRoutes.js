@@ -4,7 +4,7 @@ const {
   userLogin,
   userSignup,
   getAllUsers,
-} = require("../controllers/controller");
+} = require("../controllers/userController");
 
 router.route("/login").post(userLogin);
 router.route("/signup").post(userSignup);

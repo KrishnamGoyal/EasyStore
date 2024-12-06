@@ -18,7 +18,7 @@ const userLogin = async (req, res) => {
     });
     res.status(200).json({ token });
   } catch (error) {
-    res.status(500).json({ error });
+    res.status(500).json({ error: "Server error", details: error.message });
   }
 };
 
@@ -41,8 +41,12 @@ const userSignup = async (req, res) => {
 
 const getAllUsers = async (req, res) => {
   //for testing purposes
-  const usersData = await User.find();
-  res.status(200).json(usersData);
+  try {
+    const usersData = await User.find();
+    res.status(200).json(usersData);
+  } catch (error) {
+    res.status(500).json({ error: "Server error", details: error.message });
+  }
 };
 
 module.exports = { userLogin, userSignup, getAllUsers };

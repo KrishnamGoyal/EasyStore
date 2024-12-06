@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Running Shoes",
+    "description": "Lightweight running shoes with breathable mesh.",
+    "price": 49.99,
+    "category": "Footwear",
+    "stock": 10
+  },
+  {
+    "name": "Laptop Stand",
+    "description": "Adjustable aluminum laptop stand for better ergonomics.",
+    "price": 34.99,
+    "category": "Electronics",
+    "stock": 12
+  },
+  {
+    "name": "Notebook Set",
+    "description": "Pack of 3 notebooks with 80 ruled pages each.",
+    "price": 5.99,
+    "category": "Stationery",
+    "stock": 100
+  }
+]
