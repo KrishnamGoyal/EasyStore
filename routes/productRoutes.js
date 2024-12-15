@@ -14,7 +14,7 @@ const {
 
 router
   .route("/")
-  .get(getProducts)
+  .get(authMiddleware, adminMiddleware, getProducts)
   .post(authMiddleware, adminMiddleware, addProduct);
 router
   .route("/:id")
